@@ -5,6 +5,7 @@ import 'package:fonctionnalite_esport_voyages/service/database.dart';
 class AuthentificationService {
   final FirebaseAuth auth = FirebaseAuth.instance;
 
+  // cette partie du tuto a revoir et a comprendre
 
   AppUser? _userFromFirebaseUser(User? user) {
     return user != null ? AppUser(uid: user.uid) : null;
