@@ -39,6 +39,9 @@ class _AccueilState extends State<Accueil> {
               ElevatedButton(onPressed: (){
                 Navigator.pushNamed(context, '/delete');
               }, child: const Text('supprimer votre profil')),
+              ElevatedButton(onPressed: (){
+                Navigator.pushNamed(context, '/reservation');
+              }, child: const Text('Faire une réservation')),
             ],
         ),
         )

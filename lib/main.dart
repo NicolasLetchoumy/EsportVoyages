@@ -6,6 +6,7 @@ import 'package:fonctionnalite_esport_voyages/pages/pageUser/delete.dart';
 import 'package:fonctionnalite_esport_voyages/pages/pageUser/readuser.dart';
 import 'package:fonctionnalite_esport_voyages/pages/pageLogger/splashScreen_wrapper.dart';
 import 'package:fonctionnalite_esport_voyages/pages/pageUser/update.dart';
+import 'package:fonctionnalite_esport_voyages/pages/r%C3%A9servation/reservation.dart';
 import 'package:fonctionnalite_esport_voyages/service/authentificationService.dart';
 import 'package:provider/provider.dart';
 import 'Models/user.dart';
@@ -60,6 +61,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (context) => const ReadUser());
       case '/delete' :
         return MaterialPageRoute(builder: (context) => const DeleteUser());
+      case '/reservation' :
+        return MaterialPageRoute(builder: (context) => const Reservation());
 
 
 
