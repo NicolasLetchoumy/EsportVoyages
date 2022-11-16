@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import '../../Models/reservationData.dart';
 import '../../service/authentificationService.dart';
+import '../../service/databaseEvent.dart';
+import '../miseEnPlaceListeBdd/eventList.dart';
 
 class Reservation extends StatefulWidget {
   const Reservation({Key? key}) : super(key: key);
@@ -14,9 +18,16 @@ class _ReservationState extends State<Reservation> {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+
+    final event = Provider.of<ReservationEvent>(context);
+  //  if (event == null) throw Exception("Event not found");
+    final database = DatabaseServiceEvent(uid: event.uid);
+    return StreamProvider<List<ReservationEventData>>.value(
+      initialData: [],
+      value: database.events,
+      child: Scaffold(
         appBar: AppBar(
-          title: const Text('Accueil'),
+          title: const Text('Ma réservation'),
           actions: <Widget> [
             TextButton.icon(onPressed: () async {
               await auth.signOut();
@@ -27,13 +38,8 @@ class _ReservationState extends State<Reservation> {
             )
           ],
         ),
-        body: Center(
-          child :Column(
-            children: [
-              
-            ],
-          ),
-        )
+        body: EventList(),
+      ),
     );
   }
 }

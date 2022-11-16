@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fonctionnalite_esport_voyages/Models/user.dart';
-import 'package:fonctionnalite_esport_voyages/pages/pageUser/userList.dart';
+import 'package:fonctionnalite_esport_voyages/pages/miseEnPlaceListeBdd/userList.dart';
 import 'package:fonctionnalite_esport_voyages/service/database.dart';
 import 'package:provider/provider.dart';
 import '../../service/authentificationService.dart';

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fonctionnalite_esport_voyages/Models/user.dart';
-import 'package:fonctionnalite_esport_voyages/service/database.dart';
 import 'package:provider/provider.dart';
-import '../../service/authentificationService.dart';
 
 class UserList extends StatefulWidget {
 

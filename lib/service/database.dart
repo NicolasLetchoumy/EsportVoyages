@@ -52,6 +52,4 @@ class DatabaseService {
   Stream<List<AppUserData>> get users {
     return userCollection.snapshots().map(_userListFromSnapshot);
   }
-
-
 }
