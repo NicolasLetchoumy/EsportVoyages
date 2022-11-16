@@ -19,6 +19,7 @@ class _AccueilVisiteState extends State<AccueilVisite> {
     return  Scaffold(
         appBar: AppBar(
           title: const Text('Accueil'),
+          
           actions: <Widget> [
             TextButton.icon(onPressed: () async {
               Navigator.pushNamed(context, '/logger');
@@ -32,9 +33,13 @@ class _AccueilVisiteState extends State<AccueilVisite> {
           child :Column(
             children: [
               Row(
-              children: const [
+              children:  [
                Text('test'),
-
+                Image.asset('assets/images/esportvoyages_logo_536477.png',
+                width: 100,
+                  height: 100,
+                  fit: BoxFit.cover,
+                ),
               ],
             ),
               ElevatedButton(onPressed: () {
