@@ -37,6 +37,7 @@ class MyApp extends StatelessWidget {
       value: AuthentificationService().user,
       initialData: null,
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         initialRoute: '/',
         onGenerateRoute: (settings) => RouteGenerator.generateRoute(settings),
         theme: ThemeData(
