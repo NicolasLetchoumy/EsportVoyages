@@ -18,9 +18,8 @@ class _ReservationState extends State<Reservation> {
 
   @override
   Widget build(BuildContext context) {
-
-    final event = Provider.of<ReservationEvent>(context);
-  //  if (event == null) throw Exception("Event not found");
+    final event = Provider.of<ReservationEvent?>(context);
+    if (event == null) throw Exception("Event not found");
     final database = DatabaseServiceEvent(uid: event.uid);
     return StreamProvider<List<ReservationEventData>>.value(
       initialData: [],
