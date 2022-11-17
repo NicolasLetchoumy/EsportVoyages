@@ -107,9 +107,9 @@ class authentificationScreenState extends State<authentificationScreen> {
           !showSignIn ? const SizedBox(height: 24,) : Container(),
 
           TextFormField(
-            controller: controllerEmail ,
-            validator: (value) => value == null || value.isEmpty ? "Enter a Email" : null,
-            decoration: textInputDecoration.copyWith(hintText: 'Email'),
+              controller: controllerEmail ,
+              validator: (value) => value == null || value.isEmpty ? "Enter a Email" : null,
+              decoration: textInputDecoration.copyWith(hintText: 'Email'),
           ), const SizedBox(height: 24,),
           TextFormField(
             controller: controllerMdp ,

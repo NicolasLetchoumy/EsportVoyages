@@ -12,34 +12,38 @@ class _AccueilVisiteState extends State<AccueilVisite> {
 
   final AuthentificationService auth = AuthentificationService();
 
-
-
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
         appBar: AppBar(
-          title: const Text('Accueil'),
-          
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          title: Row( children: const [
+            Padding( padding: EdgeInsets.all(15), child: Text('Accueil', style: TextStyle(color: Colors.black),),),
+            Text('EsportVoyages', style: TextStyle(color: Colors.black),) ]),
+            centerTitle: true,
+          leading: Image.asset('assets/images/esportvoyages_logo_536477.png',
+            width: 100,
+            height: 100,
+            fit: BoxFit.cover,
+          ),
           actions: <Widget> [
             TextButton.icon(onPressed: () async {
               Navigator.pushNamed(context, '/logger');
             },
-              icon: const Icon(Icons.person, color: Colors.white,),
-              label:  Text('connectez-vous',style: const TextStyle(color: Colors.white),),
-            )
+              icon: const Icon(Icons.person, color: Colors.blue,),
+              label:  const Text('connectez-vous',style: TextStyle(color: Colors.blue),),
+            ),
           ],
         ),
         body: Center(
           child :Column(
             children: [
               Row(
-              children:  [
+                mainAxisAlignment: MainAxisAlignment.center,
+              children: const  [
                Text('test'),
-                Image.asset('assets/images/esportvoyages_logo_536477.png',
-                width: 100,
-                  height: 100,
-                  fit: BoxFit.cover,
-                ),
+
               ],
             ),
               ElevatedButton(onPressed: () {
